@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title><%= title %></title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body class="is-preload">
+		<header id="header">
+			<div class="inner">
+				<a href="#" class="image avatar"><img src="<%= avatar %>" alt="" /></a>
+        <h1><strong><%= title %></strong></h1>
+        <p><%= tags[0] %><br /><%= tags[1] %></p>
+			</div>
+		</header>
+
+		<div id="main">
+			<section id="one">
+				<header class="major">
+				<h2>{ <span id="welcome"></span> }</h2>
+						<p><%= welcome %> </p>
+    			</header>
+    		</section>
+				<section id="two">
+					<h2>Projects</h2>
+					<div class="row">
+          <% for (var key in projects) { %>
+            <article class="col-6 col-12-xsmall work-item">
+							<a href="<%= projects[key].link %>">
+                <img width="330" height="200" src="<%= projects[key].image %>" alt="">
+              </a>
+							<h3><%= projects[key].name %></h3>
+            </article>
+          <% } %>
+          </div>
+				</section>
+				<section id="email">
+          <h2>Get In Touch</h2>
+					<div class="row">
+						<div class="col-8 col-12-small">
+              <form action="/contact" id="contact-form" method="post" role="form">
+                <div class="row gtr-uniform gtr-50">
+                  <div class="col-6 col-12-xsmall">
+                    <input type="hidden" id="about" name="about"/>
+                    <label for="name">Name
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        required
+                      />
+                    </label>
+                  </div>
+
+                  <div class="col-6 col-12-xsmall">
+                    <label for="email">Email
+                      <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Your email"
+                        required
+                      />
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="subject">Subject
+                    <input
+                      id="subject"
+                      name="subject"
+                      type="text"
+                      placeholder="Subject"
+                      required
+                    />
+                </label>
+                </div>
+
+                <div class="col-12">
+                  <label for="message">Message
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message here"
+                      rows="3"
+                      required
+                    ></textarea>
+                  </label>
+                </div>
+                <input type="submit" value="Send Message" />
+              </form>
+              <% if (sent == '1') { %>
+                <span id="successMessage" class="formPass">Thank you, your message has been successfully sent</span>
+              <% } %>
+              <% if (sent == '0') { %>
+                <span id="successMessage" class="formPass">Sorry, unable to send, please try again</span>
+              <% } %>
+					</div>
+					<div class="col-4 col-12-small">
+						<ul class="labeled-icons">
+							<li>
+								<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+								<a href="tel:<%= contact[1] %>"><%= contact[0] %></a>
+							</li>
+							<li>
+								<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+								<a href = "mailto: <%= contact[2] %>"><%= contact[2] %></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+		</div>
+
+    <footer id="footer">
+      <div class="inner">
+        <ul class="icons">
+          <% for (var key in social) { %>
+            <li><a href="<%= social[key].link %>" class="icon fa-<%= social[key].icon %>"><span class="label"><%= social[key].name %></span></a></li>
+          <% } %>
+        </ul>
+        <ul class="copyright">
+          <li><i class="icon fa-code" aria-hidden="true"></i> with <i class="icon fa-heart" aria-hidden="true"></i> by <%= title %>  &copy; 2020</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.poptrox.min.js"></script>
+    <script src="js/browser.min.js"></script>
+    <script src="js/breakpoints.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      showText("#welcome", "Welcome", 0, 300);
+    });
+
+    let showText = function (target, message, index, interval) {
+      if (index < message.length) {
+        document.querySelector(target).innerHTML = document.querySelector(target).innerHTML + message[index++];
+        setTimeout(function () {
+          showText(target, message, index, interval);
+        },interval);
+      }
+    }
+    </script>
+	</body>
+</html>
