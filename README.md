@@ -1,5 +1,8 @@
 # Web App using Express with views
 
+# How to setup
+`npm install`
+
 ## How to run
 `node index.js`
 
