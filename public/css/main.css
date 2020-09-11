@@ -1764,8 +1764,14 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	header p {
+	header.major p {
 		color: #000;
+		position: relative;
+		margin: 0 0 1.5em 0;
+	}
+
+	header p {
+		color: #fff;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
