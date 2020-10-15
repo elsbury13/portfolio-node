@@ -1,0 +1,24 @@
+{
+  "name": "@elsbury13/github-contributions",
+  "version": "1.0.0",
+  "description": "Github Contribution Scrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elsbury13/github-contributions"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@elsbury13/github-contributions"
+  },
+  "keywords": [
+    "Gihub-Contribution"
+  ],
+  "author": "@elsbury13",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  }
+}
