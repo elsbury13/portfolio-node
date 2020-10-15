@@ -1,6 +1,14 @@
 const { Router } = require('express')
 const router = Router()
 const nodemailer = require('nodemailer')
+const contributions = require('../public/js/github-contributions')
+
+let commits
+
+contributions('elsbury13')
+  .then(data => {
+    commits = data
+})
 
 router.get('/', function (req, res) {
   var sent
@@ -45,7 +53,8 @@ router.get('/', function (req, res) {
     projects,
     social,
     contact,
-    sent
+    sent,
+    commits
   })
 })
 

@@ -21,8 +21,25 @@
 				<h2>{ <span id="welcome"></span> }</h2>
 						<p><%= welcome %> </p>
     			</header>
-    		</section>
-				<section id="two">
+        </section>
+        <section id="two">
+					<h2>Github Contribution Activity</h2>
+					<div class="row">
+            <article class="col-4 col-12-xsmall">
+              <h2>Weekly</h2>
+              <p class="contributions"><%= commits.week %></p>
+            </article>
+            <article class="col-4 col-12-xsmall">
+              <h2>Monthly</h2>
+              <p class="contributions"><%= commits.month %></p>
+            </article>
+            <article class="col-4 col-12-xsmall">
+              <h2>Yearly</h2>
+              <p class="contributions"><%= commits.year %></p>
+            </article>
+          </div>
+				</section>
+				<section id="three">
 					<h2>Projects</h2>
 					<div class="row">
           <% for (var key in projects) { %>

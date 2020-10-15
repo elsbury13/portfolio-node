@@ -72,6 +72,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+.contributions {
+	font-size: 3rem;
+	margin: 0;
+}
+
 /* Basic */
 
 	html {
