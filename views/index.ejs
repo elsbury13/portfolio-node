@@ -27,15 +27,27 @@
 					<div class="row">
             <article class="col-4 col-12-xsmall">
               <h2>Weekly</h2>
-              <p class="contributions"><%= commits.week %></p>
+              <% if (commits) { %>
+                <p class="contributions"><%= commits.week %></p>
+              <% } else { %>
+                <p>Unable to load</p>
+              <% } %>
             </article>
             <article class="col-4 col-12-xsmall">
               <h2>Monthly</h2>
-              <p class="contributions"><%= commits.month %></p>
+              <% if (commits) { %>
+                <p class="contributions"><%= commits.month %></p>
+              <% } else { %>
+                <p>Unable to load</p>
+              <% } %>
             </article>
             <article class="col-4 col-12-xsmall">
               <h2>Yearly</h2>
-              <p class="contributions"><%= commits.year %></p>
+              <% if (commits) { %>
+                <p class="contributions"><%= commits.year %></p>
+              <% } else { %>
+                <p>Unable to load</p>
+              <% } %>
             </article>
           </div>
 				</section>
