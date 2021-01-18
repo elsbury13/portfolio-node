@@ -35,14 +35,14 @@ router.get('/', function (req, res) {
   var contact = ['07891090964', '+447891090964', 'andy.elsbury@gmail.com']
 
   var projects = {
-    gates: { image: 'img/gatestranslate.jpg', link: '#', name: 'Gates Translate' },
     education: { image: 'img/education1st.png', link: 'https://andyelsbury.uk/andy/education1st/', name: 'Education 1st' },
     challenge: { image: 'img/thechallenge.png', link: 'https://andyelsbury.uk/andy/thechallenge/', name: 'The Challenge' },
     swift: { image: 'img/swift.png', link: 'https://www.swiftsportscoaching.co.uk', name: 'Swift Sports Coaching' },
     tkkma: { image: 'img/tkkma.png', link: 'https://www.tkkma.co.uk', name: 'TKKMA' },
     bilbao: { image: 'img/bristolbilbao2.png', link: 'https://www.bristolbilbao.co.uk', name: 'Bristol Bilbao' },
     wedding: { image: 'img/wedding.png', link: 'https://andyelsbury.uk/andy/mrandmrselsbury/public/', name: 'Mr & Mrs Elsbury' },
-    christian: { image: 'img/tanikaandchristian.png', link: 'https://andyelsbury.uk/andy/tanikaandchristianswedding/public', name: 'Tanika & Christian\'s Wedding' }
+    christian: { image: 'img/tanikaandchristian.png', link: 'https://andyelsbury.uk/andy/tanikaandchristianswedding/public', name: 'Tanika & Christian\'s Wedding' },
+    laurenJamoe: { image: 'img/laurenjamie.png', link: 'https://laurenjamiehairandmakeup.com', name: 'Lauren Jamie' }
   }
 
   res.render('index', {
