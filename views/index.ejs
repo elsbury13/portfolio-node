@@ -11,7 +11,7 @@
 			<div class="inner">
 				<a href="#" class="image avatar"><img src="<%= avatar %>" alt="" /></a>
         <h1><strong><%= title %></strong></h1>
-        <p><%= tags[0] %><br /><%= tags[1] %></p>
+        <p><%= tags[0] %><br /><%= tags[1] %><br /><%= tags[2] %></p>
 			</div>
 		</header>
 
@@ -151,7 +151,7 @@
           <% } %>
         </ul>
         <ul class="copyright">
-          <li><i class="icon fa-code" aria-hidden="true"></i> with <i class="icon fa-heart" aria-hidden="true"></i> by <%= title %>  &copy; 2020</li>
+          <li><i class="icon fa-code" aria-hidden="true"></i> with <i class="icon fa-heart" aria-hidden="true"></i> by <%= title %>  &copy; <script>document.write(new Date().getFullYear());</script></li>
         </ul>
       </div>
     </footer>

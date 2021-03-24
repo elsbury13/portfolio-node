@@ -42,7 +42,9 @@ router.get('/', function (req, res) {
     bilbao: { image: 'img/bristolbilbao2.png', link: 'https://www.bristolbilbao.co.uk', name: 'Bristol Bilbao' },
     wedding: { image: 'img/wedding.png', link: 'https://andyelsbury.uk/andy/mrandmrselsbury/public/', name: 'Mr & Mrs Elsbury' },
     christian: { image: 'img/tanikaandchristian.png', link: 'https://andyelsbury.uk/andy/tanikaandchristianswedding/public', name: 'Tanika & Christian\'s Wedding' },
-    laurenJamoe: { image: 'img/laurenjamie.png', link: 'https://laurenjamiehairandmakeup.com', name: 'Lauren Jamie' }
+    laurenJamoe: { image: 'img/laurenjamie.png', link: 'https://laurenjamiehairandmakeup.com', name: 'Lauren Jamie' },
+    shaddick: { image: 'img/shaddick.png', link: 'https://andyelsbury.uk/andy/shaddick', name: 'Mark Shaddick' },
+    desireHairdressing: { image: 'img/desire.png', link: 'https://www.desirehairdressing.com', name: 'Desire Hairdressing' }
   }
 
   res.render('index', {
