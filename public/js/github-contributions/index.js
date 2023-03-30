@@ -28,6 +28,7 @@ function contribution (matches, type, check)
   var total = 0
   var checkDate
 
+  /*
   data = matches.map(function (match) {
     if (type == 'year') {
       return {
@@ -55,7 +56,7 @@ function contribution (matches, type, check)
   for (var idx = 0; idx <= data.length - 1; idx++) {
     total += +data[idx].count
   }
-
+*/
   return total
 }
 

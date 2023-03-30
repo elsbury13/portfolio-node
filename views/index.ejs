@@ -23,7 +23,7 @@
     			</header>
         </section>
         <section id="two">
-					<h2>Github Contribution Activity</h2>
+					<h2><span id="github"></span></h2>
 					<div class="row">
             <article class="col-4 col-12-xsmall">
               <h2>Weekly</h2>
@@ -52,7 +52,7 @@
           </div>
 				</section>
 				<section id="three">
-					<h2>Projects</h2>
+					<h2><span id="projects"></span></h2>
 					<div class="row">
           <% for (var key in projects) { %>
             <article class="col-6 col-12-xsmall work-item">
@@ -64,6 +64,7 @@
           <% } %>
           </div>
 				</section>
+        <!--
 				<section id="email">
           <h2>Get In Touch</h2>
 					<div class="row">
@@ -141,6 +142,7 @@
 					</div>
 				</div>
 			</section>
+      -->
 		</div>
 
     <footer id="footer">
@@ -166,6 +168,8 @@
     <script>
     document.addEventListener('DOMContentLoaded', function() {
       showText("#welcome", "Welcome", 0, 300);
+      showText("#github", "Github Contribution Activity", 0, 100);
+      showText("#projects", "Projects", 0, 300);
     });
 
     let showText = function (target, message, index, interval) {
