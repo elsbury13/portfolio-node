@@ -19,6 +19,6 @@
   "author": "@elsbury13",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   }
 }
