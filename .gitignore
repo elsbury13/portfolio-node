@@ -1,2 +1,5 @@
 node_modules/
 public/js/github-contributions/node_modules
+public/img/.DS_Store
+public/.DS_Store
+.DS_Store
