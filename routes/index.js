@@ -1,6 +1,5 @@
 const { Router } = require('express')
 const router = Router()
-// const nodemailer = require('nodemailer')
 const contributions = require('../public/js/github-contributions')
 
 let commits
@@ -11,17 +10,6 @@ contributions('elsbury13')
 })
 
 router.get('/', function (req, res) {
-  var sent = false
-  /*
-  if (req.query.sent === '1') {
-    sent = true
-  }
-
-  if (req.query.sent === '0') {
-    sent = false
-  }
-  */
-
   var welcome = 'Software Developer with a demonstrated history of working in the computer software industry. Skilled in Scrum, JavaScript, PHP, MySQL, Linux. Strong engineering professional graduated from University of Plymouth.'
   var title = 'Andy Elsbury'
   var tags = ['Software Developer', 'Scrum Master', 'Release Manager']
@@ -59,42 +47,8 @@ router.get('/', function (req, res) {
     projects,
     social,
     contact,
-    sent,
     commits
   })
 })
-
-/*
-router.post('/contact', (req, res) => {
-  if (req.body.about) {
-    res.redirect('/')
-  }
-
-  const smtpTrans = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'andy.elsbury@gmail.com',
-      pass: ''
-    }
-  })
-
-  const mailOpts = {
-    from: `${req.body.email}`,
-    to: 'andy.elsbury@gmail.com',
-    subject: `${req.body.subject}`,
-    text: `${req.body.name} (${req.body.email}) says: \n${req.body.message}`
-  }
-
-  smtpTrans.sendMail(mailOpts, (error, response) => {
-    if (error) {
-      res.render('/?sent=0#email')
-    } else {
-      res.redirect('/?sent=1#email')
-    }
-  })
-})
-*/
 
 module.exports = router
